@@ -1,19 +1,25 @@
 package com.hanbit.java;
 
+import com.hanbit.animal.Cat;
 import com.hanbit.animal.Dog;
+import com.hanbit.animal.Hamster;
 
 public class Runner {
 	
 	public static void main(String[] args) {
 		Dog dog = new Dog("진돗개","흰색");
-		Dog dog2 = new Dog("검둥이","도베르만","검정");
-		Dog dog3 = new Dog("바둑이","달마시안","검정/흰색");
-		Dog dog4 = new Dog("바둑이","달마시안","검정/흰색");
+		Cat cat = new Cat("두식","터키쉬앙고라","흰색");
+		Hamster hamster = new Hamster("뽀로리","몰라","흰색");
+		
+		dog.setName("");
+		cat.setName(null);
+		hamster.setName(null);
+		
 		
 		System.out.println(dog);
-		System.out.println(dog2);
-		System.out.println(dog3);
-		System.out.println(dog4);
+		System.out.println(cat);
+		System.out.println(hamster);
+
 
 		}
 	
