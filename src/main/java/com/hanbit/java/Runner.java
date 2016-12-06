@@ -8,10 +8,12 @@ public class Runner {
 		Dog dog = new Dog("진돗개","흰색");
 		Dog dog2 = new Dog("검둥이","도베르만","검정");
 		Dog dog3 = new Dog("바둑이","달마시안","검정/흰색");
+		Dog dog4 = new Dog("바둑이","달마시안","검정/흰색");
 		
 		System.out.println(dog);
 		System.out.println(dog2);
 		System.out.println(dog3);
+		System.out.println(dog4);
 
 		}
 	
