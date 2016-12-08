@@ -2,14 +2,16 @@ package com.hanbit.animal;
 
 import org.apache.commons.lang3.StringUtils;
 
-public abstract class Animal{
+import com.hanbit.Breathable;
+import com.hanbit.Creature;
+import com.hanbit.Livable;
 
-	public static final String DEFAULT_NAME = "무명";
+public abstract class Animal implements Breathable, Livable {
 	
 	protected String name;
 	protected final String kind;
 	protected String color;
-		
+	
 	public Animal(String name, String kind, String color) {
 		this.name = name;
 		this.kind = kind;
@@ -17,8 +19,18 @@ public abstract class Animal{
 	}
 	
 	@Override
+	public boolean isLive() {
+		return true;
+	}
+	
+	@Override
+	public void breathe() {
+		System.out.println("산소 -> 이산화탄소");
+	}
+	
+	@Override
 	public String toString() {
-		return name + " : " + kind + " : " + color;
+		return name + ":" + kind + ":" + color;
 	}
 	
 	public String getName() {
@@ -27,13 +39,13 @@ public abstract class Animal{
 	
 	public void setName(String name) {
 		if (StringUtils.isBlank(name)) {
-			name = getDafaultName();
+			name = getDefaultName();
 		}
 		
 		this.name = name;
 	}
 	
-	protected abstract String getDafaultName(); 
+	protected abstract String getDefaultName();
 	
 	public String getKind() {
 		return kind;
@@ -51,5 +63,4 @@ public abstract class Animal{
 		return color;
 	}
 	
-
 }

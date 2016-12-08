@@ -1,6 +1,5 @@
 package com.hanbit.animal;
 
-
 public class Dog extends Animal {
 	
 	public static final String DEFAULT_NAME = "멍멍이";
@@ -14,9 +13,8 @@ public class Dog extends Animal {
 	}
 
 	@Override
-	protected String getDafaultName() {
+	protected String getDefaultName() {
 		return DEFAULT_NAME;
 	}
-	
 	
 }
